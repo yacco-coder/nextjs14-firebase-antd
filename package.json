@@ -1,0 +1,42 @@
+{
+  "name": "nextjs14-firebase-antd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run build-service-worker && next build",
+    "build-service-worker": "npx esbuild firebase-messaging-sw.js --bundle --outfile=public/firebase-messaging-sw.js",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .prettierignore .",
+    "format:fix": "prettier --write --ignore-path .prettierignore .",
+    "emulator": "firebase emulators:start --import=./offline-seed --export-on-exit"
+  },
+  "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.1",
+    "antd": "^5.21.2",
+    "dayjs": "^1.11.13",
+    "firebase": "^10.14.0",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.3",
+    "lodash": "^4.17.21",
+    "next": "14.2.14",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.9",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.14",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
